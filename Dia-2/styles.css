@@ -1,0 +1,20 @@
+body {
+    background-color: #f5f4f5;
+}
+h1 {
+    color: #0027f9;
+    font-size: 40px;
+}
+h2 {
+    font-size: 30px;
+}
+h2, h3 {
+  color: #1979ce;
+}
+ol {
+    color: red;
+    text-decoration: none
+}
+p {
+    font-size: 21px;
+}
