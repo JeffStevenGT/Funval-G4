@@ -1,0 +1,112 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-color: black;
+    color: white;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    height: 100vh;
+}
+.contenedor{
+    width: 500px;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+.contenedor-hijo1{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #545554;
+    width: 350px;
+    height: 400px;
+    gap: 12px;
+    font-family: "Roboto", sans-serif;
+    border-radius: 3px;
+}
+.logo{
+    width: 200px;
+}
+.inputs{
+    display: flex;
+    flex-direction: column;
+    width: 250px;  
+    gap: 4px;
+
+}
+.input1,
+.input2 {
+    height: 30px;
+    font-family: "Roboto", sans-serif;
+    border-radius: 3px;
+    border: 1px solid #545554;
+    background-color: #121313;
+    font-size: 10px;
+    font-weight: 500;
+    padding-left: 8px;
+}
+button{
+    width: 250px;
+    height: 28px;
+    border-radius: 7px;
+    background-color: #018eed;
+    color: white;
+    border: none;
+    font-weight: 700;
+    cursor: pointer;
+}
+.separadores{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 15px;
+    gap: 17px;
+}
+.separador{
+    width: 101px;
+    border: 1px solid #545554;
+}
+.sesion{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #018eed; 
+    margin-top: -12px;
+    margin-bottom: -20px;
+    gap: 10px;
+}
+.p1{
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;  
+}
+.p2{
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;  
+}
+.contenedor-hijo2{
+    display: flex;
+    justify-content: center;
+    align-items: center;  
+    border: 1px solid #545554;    
+    width: 350px;
+    height: 60px;
+    gap: 5px;
+    font-family: "Roboto", sans-serif;
+    font-size: 14px;
+    border-radius: 3px;
+}
+.p3{
+    font-weight: 400;
+    cursor: pointer;  
+}
+.p4{
+    font-weight: 500; 
+    color: #018eed;  
+    cursor: pointer;     
+}
