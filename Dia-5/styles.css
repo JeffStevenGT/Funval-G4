@@ -1,0 +1,86 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.caja{
+    width: 100px;
+    height: 100px;
+    border-radius: 5px;
+    background-color: brown;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+.contenedor{
+    display: flex;
+    gap: 20px;
+}
+.contenedor1{
+    display: grid;
+    grid-template-columns: repeat(3,100px);
+    gap: 20px;
+
+}
+.contenedor2{
+    height: 220px;
+    width: 150px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: darkgreen;
+    color: white;
+}
+
+/* Extra small (xs) – menores a 576px */
+@media (max-width: 575.98px) {
+    .contenedor{
+    display: flex;
+    flex-direction: column;
+    }
+    .contenedor1{
+    order: 2;
+    display: grid;
+    grid-template-columns: repeat(2,60px);  
+    }
+    .caja1 { order: 6; }
+    .caja2 { order: 5; }
+    .caja3 { order: 4; }
+    .caja4 { order: 3; }
+    .caja5 { order: 2; }
+    .caja6 { order: 1; }
+
+    .caja{
+    width: 70px;
+    height: 70px;
+    border-radius: 5px;
+    background-color: brown;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    }
+}
+/* Small (sm) – 576px o más */
+@media (min-width: 576px) {
+}
+/* Medium (md) – 768px o más */
+@media (min-width: 768px) {
+}
+/* Large (lg) – 992px o más */
+@media (min-width: 992px) {
+}
+/* Extra large (xl) – 1200px o más */
+@media (min-width: 1200px) {
+}
+/* Extra extra large (xxl) – 1400px o más */
+@media (min-width: 1400px) {
+}

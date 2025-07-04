@@ -1,0 +1,134 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.contenedor{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+.contenedor2{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+.contenedor3{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+.contenedor-texto-numero{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+.sub-contenedor1{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+.caja{
+    width: 500px;
+    border: 1px solid;
+}
+.caja-texto{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 35px;
+    font-weight: 600;
+    background-color: yellow;
+    font-size: 20px;
+}
+.caja-numerada{
+    display: flex;
+    height: 150px;
+    font-size: 80px;
+    font-weight: 600;
+    align-items: center;
+}
+.uno{
+    background-color: red;
+}
+.dos{
+    background-color: cyan;
+    justify-content: center;
+}
+.tres{
+    background-color: red;
+    justify-content: end;
+}
+.header{
+    background-color: coral;
+}
+
+/* Small (sm) – 576px o más */
+@media (min-width: 576px) {
+    .header{
+    justify-content: left;
+    padding: 8px;
+    background-color: cyan;
+    }
+    .sub-contenedor1{
+    display: flex;
+    flex-direction: row;
+    gap: 8px
+    }
+    .uno{
+    width: 246px;
+    }
+    .dos{
+    width: 246px;
+    justify-content: end;
+    background-color: red;
+    }
+    .tres{
+    height: 100px;
+    justify-content: center;
+    background-color: greenyellow;
+    }
+
+}
+
+/* Medium (md) – 768px o más */
+@media (min-width: 768px) {
+    .header{
+    width: 586px;
+    background-color: greenyellow;
+    }
+    .caja-numerada{
+    width: 190px;
+    height: 250px;
+    justify-content: center;
+    align-items:baseline
+    }
+    .contenedor2{
+    display: flex;
+    flex-direction: row;
+    }
+    .contenedor3{
+    display: flex;
+    flex-direction: row;
+    }
+    .footer1{
+    width: 289px;
+    justify-content: end; 
+    padding-right: 8px;       
+    }
+    .footer2{
+    width: 289px;
+    justify-content: start;
+    padding-left: 8px;  
+    }
+    .tres{
+    background-color: red;
+    }
+}
+
