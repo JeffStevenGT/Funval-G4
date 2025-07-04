@@ -35,7 +35,7 @@ body{
     gap: 8px;
 }
 .caja{
-    width: 500px;
+    width: 350px;
     border: 1px solid;
 }
 .caja-texto{
@@ -75,6 +75,7 @@ body{
     justify-content: left;
     padding: 8px;
     background-color: cyan;
+    width: 500px;
     }
     .sub-contenedor1{
     display: flex;
@@ -93,6 +94,11 @@ body{
     height: 100px;
     justify-content: center;
     background-color: greenyellow;
+    width: 500px;
+    }
+    .footer1,
+    .footer2{
+    width: 500px;    
     }
 
 }
