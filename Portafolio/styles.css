@@ -1,0 +1,33 @@
+html,
+body{
+    padding: 0;
+    margin: 0;
+}
+ul{
+    font-family: "Press Start 2P", system-ui;
+    font-weight: 400;
+    font-style: normal;
+    /* color: #f0d38a; */
+    color: white
+}
+#Home{
+    background-image: url('./img/piso.png');
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+}
+
+#Home    { background: linear-gradient(#000000, #0e1827);; }  
+#About    { background: linear-gradient(#000000, #0e1827);; }  
+#Skills   { background: linear-gradient(#000000, #0e1827);; }  
+#Projects { background: linear-gradient(#000000, #0e1827);; }  
+#Contact  { background: linear-gradient(#000000, #0e1827);; }  
+
+.panel {
+    min-width: 100vw;         
+    height: 100vh;
+    flex-shrink: 0;             
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
