@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="dark">
+<html lang="en" class="">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,13 +11,179 @@
     <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Silkscreen:wght@400;700&display=swap" rel="stylesheet">
     <title>Document</title>
 </head>
-<body class="w-screen min-h-[100vh] bg-[#5071ff] justify-center relative">
-    <video muted autoplay loop class="w-full h-full object-cover absolute md:hidden">
+<body class="bg-sky-900  w-screen min-h-[100vh] justify-center items-center relative">
+    <header class="z-20 w-full flex flex-col justify-center items-center pt-4 absolute md:-mt-12">
+        <div class="flex items-center justify-center w-screen pt-[3%]">
+            <div class="flex flex-col w-screen items-center justify-center gap-2">
+                <div class="flex justify-center items-baseline gap-[26%] text-[9px] md:gap-[28%] md:h-[10%] md:text-[15px] md:items-center">
+                    <div>
+                        <div>JEFF</div>
+                        <div>000000</div>
+                    </div>
+                    <div class="flex justify-center items-center gap-[13%]">
+                        <img src="./img/Coin.gif" alt="coin" class="h-[25%] md:h-7">
+                        <p>x</p>
+                        <p>00</p>
+                    </div>                
+                    <img src="./img/WiCH.gif" alt="ruleta" class="hidden w-10 md:block md:w-30">                    
+                    <div>
+                        <p>WORLD</p>
+                        <p>1 - 1</p>
+                    </div>
+                    <div>TIME</div>
+                </div>
+                
+            </div>
+        </div> 
+        <img src="./img/hi-jeff.png" alt="tablero" class="h-57 hover:scale-105 pt-6 md:h-71 md:-mt-4">  
+        <section class="flex flex-col items-end justify-center pt-4 md:-mt-1 ">
+            <div class="relative">
+                <nav>
+                    <ul class="flex flex-col justify-center items-center text-[18px]">
+                        <li class="flex items-center justify-center gap-3">
+                            <a href="#home" class="hover:scale-110">Home</a>
+                        </li>
+                        <li class="flex items-center justify-center gap-3">
+                            <a href="#About" class="hover:scale-110">About</a>
+                        </li>
+                        <li class="flex items-center justify-center gap-3">
+                            <a href="#Skills" class="hover:scale-110">Skills</a>
+                        </li>
+                        <li class="flex items-center justify-center gap-3">
+                            <a href="#Projects" class="hover:scale-110">Projects</a>
+                        </li>
+                        <li class="flex items-center justify-center gap-3">
+                            <a href="#Contact" class="hover:scale-110">Contact</a>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="flex gap-1 absolute -left-5 top-2">
+                    <img src="./img/fungus.png" alt="hongo-rojo" class="h-3">
+                    <p class="text-[10px]">1</p>
+                    <img src="./img/row.png" alt="row" class="h-3">
+                </div>  
+                <div class="hidden gap-1 absolute -left-7 top-8">
+                    <img src="./img/fungus.png" alt="hongo-rojo" class="h-3">
+                    <p class="text-[10px]">1</p>
+                    <img src="./img/row.png" alt="row" class="h-3">
+                </div> 
+                <div class="hidden gap-1 absolute -left-9 top-15">
+                    <img src="./img/fungus.png" alt="hongo-rojo" class="h-3">
+                    <p class="text-[10px]">1</p>
+                    <img src="./img/row.png" alt="row" class="h-3">
+                </div> 
+                <div class="hidden gap-1 absolute -left-13 top-22">
+                    <img src="./img/fungus.png" alt="hongo-rojo" class="h-3">
+                    <p class="text-[10px]">1</p>
+                    <img src="./img/row.png" alt="row" class="h-3">
+                </div> 
+                <div class="hidden gap-1 absolute -left-11 top-29">
+                    <img src="./img/fungus.png" alt="hongo-rojo" class="h-3">
+                    <p class="text-[10px]">1</p>
+                    <img src="./img/row.png" alt="row" class="h-3">
+                </div>    
+            </div>         
+        </section>
+    </header>    
+    <video muted autoplay loop class="z-0 w-full h-full object-top object-cover absolute md:hidden dark:hidden">
         <source src="./videos/bg-ligth-movil.mp4" type="video/mp4">  
-    </video>    
-    <video muted autoplay loop class="hidden md:block md:w-full md:h-full md:object-cover absolute">
+    </video>   
+    <video muted autoplay loop class="z-0 hidden dark:block dark:w-full dark:h-full dark:object-top dark:object-cover absolute dark:md:hidden">
+        <source src="./videos/bg-dark-movil.mp4" type="video/mp4">  
+    </video>  
+    <video muted autoplay loop class="z-0 hidden md:block md:w-full md:h-full md:object-cover md:object-top absolute">
         <source src="./videos/bg-ligth-desktop.mp4" type="video/mp4">  
     </video>
+    <video muted autoplay loop class="z-0 hidden md:dark:block md:dark:w-full md:dark:h-full md:dark:object-top md:dark:object-cover absolute">
+        <source src="./videos/bg-dark-desktop.mp4" type="video/mp4">  
+    </video> 
+    <audio autoplay loop preload="auto">
+        <source src="./videos/Song.mp3" type="audio/mpeg">
+    </audio>  
+
+
+
+
+
+<!-- OPCION 2 -->
+<!--         <section class="absolute z-10 left-[52%] top-[54%] -translate-x-1/2 -translate-y-1/2 md:left-[52%] md:top-[70%] md:-translate-x-1/2 md:-translate-y-1/2">
+            <div class="relative">
+                <nav>
+                    <ul class="flex flex-col justify-center items-center text-[18px]">
+                        <li class="flex items-center justify-center gap-3">
+                            <a href="#home" class="hover:scale-110">Home</a>
+                        </li>
+                        <li class="flex items-center justify-center gap-3">
+                            <a href="#About" class="hover:scale-110">About</a>
+                        </li>
+                        <li class="flex items-center justify-center gap-3">
+                            <a href="#Skills" class="hover:scale-110">Skills</a>
+                        </li>
+                        <li class="flex items-center justify-center gap-3">
+                            <a href="#Projects" class="hover:scale-110">Projects</a>
+                        </li>
+                        <li class="flex items-center justify-center gap-3">
+                            <a href="#Contact" class="hover:scale-110">Contact</a>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="flex gap-1 absolute -left-5 top-2">
+                    <img src="./img/fungus.png" alt="hongo-rojo" class="h-3">
+                    <p class="text-[10px]">1</p>
+                    <img src="./img/row.png" alt="row" class="h-3">
+                </div>  
+                <div class="flex gap-1 absolute -left-7 top-8">
+                    <img src="./img/fungus.png" alt="hongo-rojo" class="h-3">
+                    <p class="text-[10px]">1</p>
+                    <img src="./img/row.png" alt="row" class="h-3">
+                </div> 
+                <div class="flex gap-1 absolute -left-9 top-15">
+                    <img src="./img/fungus.png" alt="hongo-rojo" class="h-3">
+                    <p class="text-[10px]">1</p>
+                    <img src="./img/row.png" alt="row" class="h-3">
+                </div> 
+                <div class="flex gap-1 absolute -left-13 top-22">
+                    <img src="./img/fungus.png" alt="hongo-rojo" class="h-3">
+                    <p class="text-[10px]">1</p>
+                    <img src="./img/row.png" alt="row" class="h-3">
+                </div> 
+                <div class="flex gap-1 absolute -left-11 top-29">
+                    <img src="./img/fungus.png" alt="hongo-rojo" class="h-3">
+                    <p class="text-[10px]">1</p>
+                    <img src="./img/row.png" alt="row" class="h-3">
+                </div>    
+            </div>         
+        </section>    
+    <video muted autoplay loop class="w-full h-full object-top object-cover absolute md:hidden dark:hidden">
+        <source src="./videos/bg-ligth-movil.mp4" type="video/mp4">  
+    </video>   
+    <video muted autoplay loop class="hidden dark:block dark:w-full dark:h-full dark:object-top dark:object-cover absolute dark:md:hidden">
+        <source src="./videos/bg-dark-movil.mp4" type="video/mp4">  
+    </video>  
+    <video muted autoplay loop class="hidden md:block md:w-full md:h-full md:object-cover md:object-top absolute">
+        <source src="./videos/bg-ligth-desktop.mp4" type="video/mp4">  
+    </video>
+    <video muted autoplay loop class="hidden md:dark:block md:dark:w-full md:dark:h-full md:dark:object-top md:dark:object-cover absolute">
+        <source src="./videos/bg-dark-desktop.mp4" type="video/mp4">  
+    </video> 
+    <audio autoplay loop preload="auto">
+        <source src="./videos/Song.mp3" type="audio/mpeg">
+    </audio>   -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- OPCION 3 -->   
 <!--     <main class="w-full flex flex-col justify-center items-center md:hidden ">
         <section class="flex items-center justify-center w-screen pt-[3%]">
             <div class="flex flex-col w-screen items-center justify-center gap-2">
@@ -139,7 +305,11 @@
     <img src="./img/lakitu.gif" alt="lakitu" class="w-10 absolute left-9 top-68 md:hidden">
     <img src="./img/cloud1.png" alt="cloud 1" class="w-18 absolute top-56 right-2 md:hidden">
     <img src="./img/cloud2.png" alt="cloud 2" class="w-18 absolute top-26 -left-7 md:hidden">
-  -->   
+     -->
+
+
+
+
     <!-- About --> 
 <!--     <section id="About" class="panel"></section> -->
     <!-- Skills --> 
