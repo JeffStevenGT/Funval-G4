@@ -9,3 +9,8 @@ new Swiper(".mySwiper", {
         }
     }
 });
+
+    const toggle = document.querySelector('.theme-switch__checkbox');
+    toggle.addEventListener('change', () => {
+        document.body.classList.toggle('dark', toggle.checked);
+    });
