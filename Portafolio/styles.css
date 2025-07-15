@@ -26,9 +26,8 @@ body{
 #Projects { background: linear-gradient(#000000, #0e1827);; }  
 #Contact  { background: linear-gradient(#000000, #0e1827);; }  
 
-/* DARK */
 
-/* From Uiverse.io by Galahhad */ 
+/* BOTON DARK */
 .theme-switch {
     --toggle-size: 5px;
     /* the size is adjusted using font-size,
