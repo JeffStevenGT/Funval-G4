@@ -1,10 +1,10 @@
-let opcion = parseInt(prompt(
-    "Calculadora de Áreas Geométricas\n" +
-    "1. Área de un Cuadrado\n" +
-    "2. Área de un Rectángulo\n" +
-    "3. Área de un Triángulo\n" +
-    "Seleccione una opción (1-3):"
-));
+let opcion = parseInt(prompt(    
+    "Calculadora de areas geometricas\n" +
+    "Seleccione una opcion:\n" +
+    "1. Area de un cuadrado\n" +
+    "2. Area de un rectángulo\n" +
+    "3. Area de un triangulo\n" 
+))
 
 if (opcion === 1) {
     let lado = parseFloat(prompt("Ingrese el lado del cuadrado"));
