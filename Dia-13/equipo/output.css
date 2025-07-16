@@ -815,11 +815,26 @@
     --tw-gradient-position: to right in oklab;
     background-image: linear-gradient(var(--tw-gradient-stops));
   }
+  .bg-\[url\(\'https\:\/\/elmirastoveworks\.com\/cdn\/shop\/articles\/Ratatouille_403b9fed-16a1-4e45-bf5b-0686e65833c8\.jpg\?v\=1729575999\'\)\] {
+    background-image: url('https://elmirastoveworks.com/cdn/shop/articles/Ratatouille_403b9fed-16a1-4e45-bf5b-0686e65833c8.jpg?v=1729575999');
+  }
+  .bg-\[url\(\'https\:\/\/images\.unsplash\.com\/photo-1505935428862-770b6f24f629\?q\=80\&w\=1734\&auto\=format\&fit\=crop\&ixlib\=rb-4\.1\.0\&ixid\=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA\%3D\%3D\'\)\] {
+    background-image: url('https://images.unsplash.com/photo-1505935428862-770b6f24f629?q=80&w=1734&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+  }
+  .bg-\[url\(\'https\:\/\/plus\.unsplash\.com\/premium_photo-1661768443189-d6a3c9181d6d\?q\=80\&w\=869\&auto\=format\&fit\=crop\&ixlib\=rb-4\.1\.0\&ixid\=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA\%3D\%3D\'\)\] {
+    background-image: url('https://plus.unsplash.com/premium_photo-1661768443189-d6a3c9181d6d?q=80&w=869&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+  }
+  .bg-\[url\(\'https\:\/\/wallpaperaccess\.com\/full\/1972921\.jpg\'\)\] {
+    background-image: url('https://wallpaperaccess.com/full/1972921.jpg');
+  }
   .bg-\[url\(\'https\:\/\/wallpapers\.com\/images\/hd\/puppy-background-a7izrhs1r5xubwno\.jpg\'\)\] {
     background-image: url('https://wallpapers.com/images/hd/puppy-background-a7izrhs1r5xubwno.jpg');
   }
   .bg-\[url\(\'https\:\/\/www\.xtrafondos\.com\/wallpapers\/ratatouille-9345\.jpg\'\)\] {
     background-image: url('https://www.xtrafondos.com/wallpapers/ratatouille-9345.jpg');
+  }
+  .bg-\[url\(\'https\:\/\/www\.xtrafondos\.com\/wallpapers\/resized\/ratatouille-9345\.jpg\?s\=large\'\)\] {
+    background-image: url('https://www.xtrafondos.com/wallpapers/resized/ratatouille-9345.jpg?s=large');
   }
   .bg-\[url\(\.\/img\/1\.jpg\)\] {
     background-image: url(./img/1.jpg);
@@ -870,6 +885,9 @@
   }
   .bg-top {
     background-position: top;
+  }
+  .bg-no-repeat {
+    background-repeat: no-repeat;
   }
   .object-cover {
     object-fit: cover;

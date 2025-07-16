@@ -6,17 +6,17 @@ function pedir(opcion) {
     let precio = 0;
     let plato = "";
 
-    if (opcion === 1) { precio = 40; plato = "Tacos"; alert("¡Ordenaste Tacos!"); }
+    if (opcion === 1) { precio = 40; plato = "Tacos"; alert("Ordenaste Tacos!"); }
     else if (opcion === 2) { precio = 35; plato = "Ensalada"; }
     else if (opcion === 3) { precio = 50; plato = "Hamburguesa"; }
     else if (opcion === 4) { precio = 45; plato = "Pizza"; }
     else if (opcion === 5) { precio = 30; plato = "Sopa"; }
     else if (opcion === 6) { precio = 70; plato = "Pasta"; }
+    else if (opcion === 7) { precio = 170; plato = "Salchipollo"; }
     else { console.log("Ingrese datos válidos"); return; }
 
     total += precio;
 
-  // Agrupar pedidos repetidos
 if (pedidosContados[plato]) {
     pedidosContados[plato].cantidad += 1;
     pedidosContados[plato].subtotal += precio;
@@ -27,7 +27,6 @@ if (pedidosContados[plato]) {
     };
 }
 
-  // Mostrar lista actualizada
 listaPedidos.innerHTML = "";
     for (let nombrePlato in pedidosContados) {
     const item = document.createElement("li");
@@ -35,7 +34,6 @@ listaPedidos.innerHTML = "";
     listaPedidos.appendChild(item);
 }
 
-  // Total y nombre del cliente
 let nombre = document.getElementById("nombre").value || "Cliente";
 let descuento = total > 120 ? " (5% de descuento aplicado!)" : "";
 let totalFinal = total > 120 ? (total * 0.95).toFixed(2) : total.toFixed(2);

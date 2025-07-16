@@ -120,113 +120,111 @@ function retornaResultado(booleano) {
   ahora deberan realizarlo con fUNCIONES
 */
 
-function esPrimo(numero) {
-    if (numero < 2) return false;
+/* DESAFIO GRUPAL 
 
-    for (let i = 2; i < numero; i++) {
-        if (numero % i === 0) return false;
-    }
+ Requerimientos del Restaurante “don baraton”
 
-    return true;
-}
+El restaurante necesita un sistema simple que permita:
 
-function generarPrimos(cantidad) {
-    let primos = [];
-    let numero = 2;
+Mostrar el menú del día (máximo 5 platos, sin usar arrays).
 
-    while (primos.length < cantidad) {
-        if (esPrimo(numero)) {
-        primos.push(numero);
-    }
-    numero++;
-    }
+Permitir que un cliente realice varios pedidos (repetir mientras desee).
 
-    return primos;
-}
+Calcular el precio según el plato elegido.
+
+Solicitar el nombre del cliente.
+
+Mostrar una factura final con el total a pagar por todos los platos.
+
+(Opcional +5PTS) Aplicar descuento del 5% si el total supera los $120.
+
+(Opcional +5PTS) Mostrar un mensaje especial si el cliente eligió “Tacos”.
+
+(Opcional html +10pts)
+*/
+
+/* funciones anonimas */
+
+let pedrito = function () {
+  console.log("hola amigos buenas tardes");
+};
+
+pedrito();
+
+/* funciones anonimas q reciben parametros */
+
+let juanito = function (nombre) {
+  console.log("hola " + nombre);
+};
+
+juanito("Kevin");
+/* funciones anonimas q reciben parametros y retornan valores */
+
+let resta = function (a, b) {
+  return a - b;
+};
+
+console.log(resta(10, 5));
+
+/* ---------ARROW FUNCTION--------- */
+
+let mulpiplicar = (a, b) => {
+  return a * b;
+};
+
+console.log(mulpiplicar(2, 6));
+/* --------------------- */
+let duplicar = (x) => x * 2;
+
+console.log(duplicar(4));
+
+let arrays = [1, 2, 3, 4];
+/* 
+  REALIZAR UNA CALCULADORA CON UN MENU
+  MULTIPLICAR
+  SUMAR
+  RESTAR
+  DIVIDIR
+  2 NUMEROS
+  vamos a crear arrowfunction para cada operacion y hacer uso de ellas 
+*/
+
+let suma1 = (a, b) => a + b;
+let resta1 = (a, b) => a - b;
+let multiplicacion1 = (a, b) => a * b;
+let division1 = (a, b) => {
+  if (b != 0 ){a / b}
+  else {alert('undefined');
+  }
+} 
+
+let calculadora = () => {
+  let opcion = parseInt(prompt("elige una operacion a realiza:\n1. Sumar\n2. Restar\n3. Multiplicar\n4. Dividir"))
+  let num1 = parseFloat(prompt("ingresa el primer numero"));
+  let num2 = parseFloat(prompt("ingresa el segundo numero"));
+
+  let resultado;
+  switch(opcion) {
+    case "1":
+      resultado = suma1(num1, num2);
+      break;
+    case "2":
+      resultado = resta1(num1, num2);
+      break;
+    case "3":
+      resultado = multiplicacion1(num1, num2);
+      break;
+    case "4":
+      resultado = division1(num1, num2);
+      break;
+    default:
+      resultado = 'opcion invalida';
+  }
+
+  alert(`resultado: ${resultado}`);
+};
+
+calculadora();
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!DOCTYPE html>
-<html lang="es">
-<head>
-  <meta charset="UTF-8">
-  <title>Don Baratón</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-</head>
-<body class="bg-gradient-to-br from-gray-100 to-gray-300 min-h-screen flex items-center justify-center">
-  <div class="bg-white shadow-2xl rounded-xl p-6 max-w-2xl w-full text-center">
-    <h1 class="text-4xl font-bold text-teal-600 mb-6">Don Baratón 🍽️</h1>
-
-    <input id="nombre" type="text" placeholder="Tu nombre"
-      class="w-full mb-6 px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-teal-500">
-
-    <h2 class="text-2xl font-semibold text-gray-800 mb-4">Menú del Día</h2>
-
-    <div class="grid grid-cols-2 gap-4 mb-4">
-      <!-- Añade tus propias imágenes con rutas personalizadas -->
-      <div class="bg-gray-50 p-4 rounded-lg shadow hover:shadow-md">
-        <img src="tacos.jpg" alt="Tacos" class="w-full h-32 object-cover rounded">
-        <button onclick="pedir(1)" class="mt-2 w-full bg-teal-500 hover:bg-teal-600 text-white font-semibold py-2 rounded">Tacos - $40</button>
-      </div>
-
-      <div class="bg-gray-50 p-4 rounded-lg shadow hover:shadow-md">
-        <img src="ensalada.jpg" alt="Ensalada" class="w-full h-32 object-cover rounded">
-        <button onclick="pedir(2)" class="mt-2 w-full bg-yellow-500 hover:bg-yellow-600 text-white font-semibold py-2 rounded">Ensalada - $35</button>
-      </div>
-
-      <div class="bg-gray-50 p-4 rounded-lg shadow hover:shadow-md">
-        <img src="hamburguesa.jpg" alt="Hamburguesa" class="w-full h-32 object-cover rounded">
-        <button onclick="pedir(3)" class="mt-2 w-full bg-red-500 hover:bg-red-600 text-white font-semibold py-2 rounded">Hamburguesa - $50</button>
-      </div>
-
-      <div class="bg-gray-50 p-4 rounded-lg shadow hover:shadow-md">
-        <img src="pizza.jpg" alt="Pizza" class="w-full h-32 object-cover rounded">
-        <button onclick="pedir(4)" class="mt-2 w-full bg-indigo-500 hover:bg-indigo-600 text-white font-semibold py-2 rounded">Pizza - $45</button>
-      </div>
-
-      <div class="bg-gray-50 p-4 rounded-lg shadow hover:shadow-md col-span-2">
-        <img src="sopa.jpg" alt="Sopa" class="w-full h-32 object-cover rounded">
-        <button onclick="pedir(5)" class="mt-2 w-full bg-purple-500 hover:bg-purple-600 text-white font-semibold py-2 rounded">Sopa - $30</button>
-      </div>
-    </div>
-
-    <div id="factura" class="mt-6 text-lg text-gray-700 font-medium"></div>
-
-    <h3 class="mt-6 text-xl font-semibold text-teal-700">📝 Pedidos realizados</h3>
-    <ul id="listaPedidos" class="mt-2 list-disc list-inside text-left text-gray-800 text-base font-medium"></ul>
-  </div>
-
-  <script>
-    let total = 0;
-    const listaPedidos = document.getElementById("listaPedidos");
-
-    function pedir(opcion) {
-      let precio = 0;
-      let plato = "";
-
-      if (opcion === 1) { precio = 40; plato = "Tacos 🌮"; alert("¡Ordenaste Tacos!"); }
-      else if (opcion === 2) { precio = 35; plato = "Ensalada 🥗"; }
-      else if (opcion === 3) { precio = 50; plato = "Hamburguesa 🍔"; }
-      else if (opcion === 4) { precio = 45; plato = "Pizza 🍕"; }
-      else if (opcion === 5) { precio = 30; plato = "Sopa 🍜"; }
-
-      total += precio;
-
-      // Agrega el plato a la lista
-      const nuevoItem = document.createElement("li");
-      nuevoItem.textContent = plato;
-      lista
