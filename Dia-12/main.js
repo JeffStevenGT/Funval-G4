@@ -100,50 +100,99 @@ switch (numeroMes) {
     console.log("ingresa un valor valido");
     break;
 }
-/* el usuario va ingresar su fecha de nacimiento dia el mes y el año ustedes deberan decirle cuantos dias tiene de vida
-nacio el 1 de julio de 2025 vivio 15 dias ustedes deberan tener en cuenta años bisiestos y febrero 
+/* el usuario va ingresar su fecha de 
+nacimiento dia el mes y el año ustedes 
+deberan decirle cuantos dias tiene de vida
+nacio el 1 de julio de 2025 vivio 15 dias 
+ustedes deberan tener en cuenta años bisiestos y febrero 
+*/
+let dia = 10;
+let mes = 6;
+let año = 1990;
+let diaHoy = 15;
+
+/* ----------------BUCLES------------------------ */
+
+/* 
+  while(condicion){
+  todo el codigo q se ejecutara en el bucle
+  su controlador del bucle 
+  }
 */
 
-let diaNacimiento = 1
-let mesNacimiento = 5
-let añoNacimiento = 2025
+/* let n = 0;
 
-let diaActual = 15;
-let mesActual = 7;
-let añoActual = 2025;
-
-let diasVividos = 0;
-
-
-if (añoNacimiento === añoActual && mesNacimiento === mesActual) {
-    diasVividos = diaActual - diaNacimiento;
-} else if (añoNacimiento === añoActual) {
-    diasVividos = 31 - diaNacimiento + diaActual;
-} else {
-    diasVividos = "Solo aplica si ha nacido en 2025";
+while (n > 5) {
+  console.log("hola mundo");
+  n++; /// n= n+1
 }
+console.log("flujo normal"); */
 
-console.log("Has vivido" + " " + diasVividos + " " + "dias");
+/*-------------- DO WHILE-------------------- */
+/* let nombreUsuario;
+do {
+  nombreUsuario = prompt("ingresa tu nombre de usuario");
+} while (nombreUsuario !== "admin");
+console.log("felicidades lograste ingresar al sistema tremendo hacker :v"); */
 
+/* ------------------FOR------------------- */
 
-/* numeros pares */
-
-let cantidad = parseInt(prompt("Ingrese la cantidad de numeros pares:"))
-let pares = 2
-
-for (let i = 1; i <= cantidad; i++) {
-   console.log(pares);   
-   pares = pares + pares
+for (let i = 0; i <= 10; i++) {
+  console.log(i);
 }
+/* ------------EJERCICIOS----------------- */
 
-/*  realizar la mutiplicacion del numero usado por el cliente */
+/* 
+REALIZAR LA SERIE DE LOS NUMEROS PARES 
+SI EL CLIENTE COLOCA EL NUMERO 5
+2,4,6,8,10
+SI EL CLIENTE COLOCA EL NUMERO 3
+2,4,6
+*/
 
-let numero1 = parseInt(prompt("ingrese primer numero"))
-let numero2 = parseInt(prompt("ingrese psegundo numero"))
-let resultado =0
+/* 
+REALIZAR LA MULTIPLICACION DE 2 NUMEROS INGRESADOS X EL CLIENTE 
+REGLA: NO PUEDEN UTILIZAR NI EL SIMBOLO / NI EL DE * SOLO PODRAN USAR EL SIMBOLO DE LA SUMA
+NUMERO 1= 2
+NUMERO 2= 4
+4+4 = 8
+2+2+2+2=8
+*/
+/* 
+    dado un numero cualquiera encontrar su factorial
+    5!=1*2*3*4*5= 120
+*/
 
-for (let i = 0; i < numero2; i++) {
-    resultado = resultado + numero1
-    
+/* 
+MOSTRAR LOS N TERMINOS DE LA SERIE FIBONACCI
+0,1,1,2,3,5,8,13,21
+*/
+let a = 0;
+let b = 1;
+let c = 0;
+let numeroCliente = parseInt(prompt("ingresa un numero"));
+
+for (let i = 1; i <= numeroCliente; i++) {
+  if (i === 1) {
+    console.log(a);
+  }
+  if (i === 2) {
+    console.log(b);
+  }
+  if (i > 2) {
+    c = a + b;
+    console.log(c);
+    a = b;
+    b = c;
+  }
 }
-
+/* 
+  GENERAR LA SERIE DE LOS NUMEROS PRIMOS ESTA SERIE SE CARACTERIZA X Q UN NUMERO PRIMO ES AQUEL
+  Q SOLO ES DIVISIBLE ENTRE 1 Y EL MISMO DE LA CANTIDAD N Q INGRESE EL CLIENTE
+  N=6
+  2,3,5,7,11,13
+  N=2
+  2,3
+  N=5
+  2,3,5,7,11
+*/
