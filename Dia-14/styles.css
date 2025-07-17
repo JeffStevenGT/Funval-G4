@@ -1,0 +1,22 @@
+body{
+    font-family: "Josefin Sans", sans-serif;
+}
+#todo{
+    letter-spacing: 1rem;
+}
+  .input {
+    appearance: none;
+    -webkit-appearance: none;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background-color: #25273c;
+    border: 2px solid #303346;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+
+  .checkbox-custom:checked {
+    background-image: linear-gradient(to right, #7e22ce, #22d3ee); /* morado → celeste */
+    border-color: transparent;
+  }

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./output.css">
+    <link rel="stylesheet" href="./styles.css">
+    <script src="./main.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+    <title>Document</title>
+</head>
+<body class="bg-[#f6f7f8] h-screen w-screen flex flex-col items-center relative dark:bg-[#161622]">
+    <div class="w-screen h-[30%] border bg-[url('./images/bg-mobile-light.jpg')] bg-cover bg-center"></div>
+    <div class="w-[88%] flex flex-col items-center absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 gap-6">
+        <div class="flex w-full justify-between font-josefin py-9">
+            <p id="todo" class="text-5xl font-semibold text-white">TODO</p>
+            <img src="./images/icon-moon.svg" alt="moon" class="w-10 h-10">
+        </div>
+        <div class="flex items-center justify-between w-full p-6 bg-white rounded-lg shadow-md  text-xl dark:bg-[#25273c]">
+            <div class="flex items-center justify-between">
+                <input type="checkbox" class="appearance-none w-7 h-7 rounded-full border-2 border-[#afafaf] transition-allborder-[#303346]  checked:bg-purple-500 dark:border-[#494c6e] dark:bg-[#25273c]">
+                <label class="ml-4 text-[#a19ea4] font-medium dark:text-[#d8daf2]">Create a new todo...</label>
+            </div> 
+        </div>
+        <div class="w-full flex flex-col gap-0.5">
+            <div class="flex items-center justify-between w-full p-6 bg-white rounded-lg shadow-md text-xl dark:bg-[#25273c]">
+                <div class="flex items-center justify-between">
+                    <input type="checkbox" class="appearance-none w-7 h-7 rounded-full border-2 border-[#afafaf] transition-allborder-[#303346]  checked:bg-purple-500 dark:border-[#494c6e] dark:bg-[#25273c]">
+                    <label class="ml-4 text-[#4c4d54] font-medium dark:text-[#d8daf2]">Complete online JavaScript course</label>
+                </div>
+                <img src="./images/icon-cross.svg" alt="cross" class="w-6">
+            </div>
+            <div class="flex items-center justify-between w-full p-6 bg-white rounded-lg shadow-md text-xl dark:bg-[#25273c]">
+                <div class="flex items-center justify-between">
+                    <input type="checkbox" class="appearance-none w-7 h-7 rounded-full border-2 border-[#afafaf] transition-allborder-[#303346]  checked:bg-purple-500 dark:border-[#494c6e] dark:bg-[#25273c]">
+                    <label class="ml-4 text-[#4c4d54] font-medium dark:text-[#d8daf2]">Jog around the park 3x</label>
+                </div>
+                <img src="./images/icon-cross.svg" alt="cross" class="w-6">
+            </div>
+            <div class="flex items-center justify-between w-full p-6 bg-white rounded-lg shadow-md text-xl dark:bg-[#25273c]">
+                <div class="flex items-center justify-between">
+                    <input type="checkbox" class="appearance-none w-7 h-7 rounded-full border-2 border-[#afafaf] transition-allborder-[#303346]  checked:bg-purple-500 dark:border-[#494c6e] dark:bg-[#25273c]">
+                    <label class="ml-4 text-[#4c4d54] font-medium dark:text-[#d8daf2]">10 minutes medidation</label>
+                </div>
+                <img src="./images/icon-cross.svg" alt="cross" class="w-6">
+            </div>
+            <div class="flex items-center justify-between w-full p-6 bg-white rounded-lg shadow-md text-xl dark:bg-[#25273c]">
+                <div class="flex items-center justify-between">
+                    <input type="checkbox" class="appearance-none w-7 h-7 rounded-full border-2 border-[#afafaf] transition-allborder-[#303346]  checked:bg-purple-500 dark:border-[#494c6e] dark:bg-[#25273c]">
+                    <label class="ml-4 text-[#4c4d54] font-medium dark:text-[#d8daf2]">Read for 1 hour</label>
+                </div>
+                <img src="./images/icon-cross.svg" alt="cross" class="w-6">
+            </div>
+            <div class="flex items-center justify-between w-full p-6 bg-white rounded-lg shadow-md text-xl dark:bg-[#25273c]">
+                <div class="flex items-center justify-between">
+                    <input type="checkbox" class="appearance-none w-7 h-7 rounded-full border-2 border-[#afafaf] transition-allborder-[#303346]  checked:bg-purple-500 dark:border-[#494c6e] dark:bg-[#25273c]">
+                    <label class="ml-4 text-[#4c4d54] font-medium dark:text-[#d8daf2]">Pick up groceries</label>
+                </div>
+                <img src="./images/icon-cross.svg" alt="cross" class="w-6">
+            </div>
+            <div class="flex items-center justify-between w-full p-6 bg-white rounded-lg shadow-md text-xl dark:bg-[#25273c]">
+                <div class="flex items-center justify-between">
+                    <input type="checkbox" class="appearance-none w-7 h-7 rounded-full border-2 border-[#afafaf] transition-allborder-[#303346]  checked:bg-purple-500 dark:border-[#494c6e] dark:bg-[#25273c]">
+                    <label class="ml-4 text-[#4c4d54] font-medium dark:text-[#d8daf2]">Complete Todo App on Frontend Mentor</label>
+                </div>
+                <img src="./images/icon-cross.svg" alt="cross" class="w-6">
+            </div>
+            <div class="flex items-center justify-between w-full p-6 bg-white rounded-lg shadow-md text-2xl text-[#908e94] dark:bg-[#25273c]">
+                <p>5 item left</p>
+                <p>Clear Completed</p>
+            </div>
+        </div>
+        <div class="flex justify-center w-full p-4 bg-white rounded-lg shadow-md  gap-5 text-2xl font-bold dark:bg-[#25273c]">
+            <p class="text-[#4a79d9]">All</p>
+            <p class="text-[#908e94]">Active</p>
+            <p class="text-[#908e94]">Completed</p>
+        </div>
+    </div>
+</body>
+</html>
+
