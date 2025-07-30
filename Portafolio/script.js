@@ -1,30 +1,16 @@
-const navItems = document.querySelectorAll(".nav-item");
-
-navItems.forEach((item) => {
-  const link = item.querySelector("a");
-  link.addEventListener("click", (e) => {
-    e.preventDefault();
-
-    // Scroll a la sección correspondiente
-    const id = link.getAttribute("href");
-    const section = document.querySelector(id);
-    section.scrollIntoView({ behavior: "smooth" });
-  });
+new Swiper(".mySwiper", {
+  slidesPerView: 3,
+  spaceBetween: 250,
+  grabCursor: true,
+  loop: true,
+  breakpoints: {
+    991: {
+      slidesPerView: 3,
+    },
+  },
 });
 
-const btn = document.getElementById("toggle-btn");
-const menu = document.getElementById("mobile-menu");
-
-btn.addEventListener("click", () => {
-  menu.classList.toggle("hidden");
-});
-
-//skills
-
-document.querySelectorAll(".boton-toggle").forEach((boton) => {
-  boton.addEventListener("click", () => {
-    const idContenido = boton.getAttribute("data-target");
-    const contenido = document.getElementById(idContenido);
-    contenido.classList.toggle("hidden");
-  });
+const toggle = document.querySelector(".theme-switch__checkbox");
+toggle.addEventListener("change", () => {
+  document.body.classList.toggle("dark", toggle.checked);
 });
