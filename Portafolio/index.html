@@ -14,12 +14,12 @@
     />
     <title>Document</title>
   </head>
-  <body class="overflow-x-hidden overflow--hidden relative">
+  <body class="overflow-x-hidden overflow-y-hidden relative">
     <main>
       <!--  HOME  -->
       <section id="home" class="h-screen w-screen flex flex-col relative">
         <header
-          class="w-full flex pt-10 flex-col justify-center items-center z-20 absolute md:pt-5"
+          class="w-full flex pt-10 flex-col justify-center items-center absolute md:pt-5  z-100"
         >
           <div
             class="flex items-center justify-center w-screen pt-0 gap-[10%] text-[9px] md:gap-[10%] md:h-[10%] md:text-[13px]"
@@ -47,7 +47,7 @@
               <p>1 - 1</p>
             </div>
             <p>TIME</p>
-            <label class="theme-switch">
+            <label class="theme-switch flex z-100">
               <input type="checkbox" class="theme-switch__checkbox" />
               <div class="theme-switch__container">
                 <div class="theme-switch__clouds"></div>
@@ -87,24 +87,39 @@
         <nav
           class="navbar h-full w-full flex flex-col items-center pt-80 text-lg z-60 md:pt-89"
         >
-          <span class="nav-item flex gap-4" data-target="#home">
-            <img src="./img/fungus.png" class="hidden mushroom" />
+          <span
+            class="nav-item flex items-center justify-center gap-4"
+            data-target="#home"
+          >
+            <img src="./img/fungus.png" class="hidden h-3 w-3 mushroom" />
             <a href="#home" class="hover:scale-110">Home</a>
           </span>
-          <span class="nav-item flex" data-target="#about">
-            <img src="./img/fungus.png" class="hidden mushroom" />
+          <span
+            class="nav-item flex items-center justify-center gap-4"
+            data-target="#about"
+          >
+            <img src="./img/fungus.png" class="hidden h-3 w-3 mushroom" />
             <a href="#about" class="hover:scale-110">About</a>
           </span>
-          <span class="nav-item flex" data-target="#skills">
-            <img src="./img/fungus.png" class="hidden mushroom" />
+          <span
+            class="nav-item flex items-center justify-center gap-4"
+            data-target="#skills"
+          >
+            <img src="./img/fungus.png" class="hidden h-3 w-3 mushroom" />
             <a href="#skills" class="hover:scale-110">Skills</a>
           </span>
-          <span class="nav-item flex" data-target="#projects">
-            <img src="./img/fungus.png" class="hidden mushroom" />
+          <span
+            class="nav-item flex items-center justify-center gap-4"
+            data-target="#projects"
+          >
+            <img src="./img/fungus.png" class="hidden h-3 w-3 mushroom" />
             <a href="#projects" class="hover:scale-110">Projects</a>
           </span>
-          <span class="nav-item flex" data-target="#contact">
-            <img src="./img/fungus.png" class="hidden mushroom" />
+          <span
+            class="nav-item flex items-center justify-center gap-4"
+            data-target="#contact"
+          >
+            <img src="./img/fungus.png" class="hidden h-3 w-3 mushroom" />
             <a href="#contact" class="hover:scale-110">Contact</a>
           </span>
         </nav>
@@ -154,24 +169,39 @@
         <nav
           class="navbar w-full flex z-60 gap-9 justify-center text-lg pt-5 absolute -top-1"
         >
-          <span class="nav-item flex gap-4" data-target="#home">
-            <img src="./img/fungus.png" class="hidden mushroom" />
+          <span
+            class="nav-item flex items-center justify-center gap-4"
+            data-target="#home"
+          >
+            <img src="./img/fungus.png" class="hidden h-3 w-3 mushroom" />
             <a href="#home" class="hover:scale-110">Home</a>
           </span>
-          <span class="nav-item flex" data-target="#about">
-            <img src="./img/fungus.png" class="hidden mushroom" />
+          <span
+            class="nav-item flex items-center justify-center gap-4"
+            data-target="#about"
+          >
+            <img src="./img/fungus.png" class="hidden h-3 w-3 mushroom" />
             <a href="#about" class="hover:scale-110">About</a>
           </span>
-          <span class="nav-item flex" data-target="#skills">
-            <img src="./img/fungus.png" class="hidden mushroom" />
+          <span
+            class="nav-item flex items-center justify-center gap-4"
+            data-target="#skills"
+          >
+            <img src="./img/fungus.png" class="hidden h-3 w-3 mushroom" />
             <a href="#skills" class="hover:scale-110">Skills</a>
           </span>
-          <span class="nav-item flex" data-target="#projects">
-            <img src="./img/fungus.png" class="hidden mushroom" />
+          <span
+            class="nav-item flex items-center justify-center gap-4"
+            data-target="#projects"
+          >
+            <img src="./img/fungus.png" class="hidden h-3 w-3 mushroom" />
             <a href="#projects" class="hover:scale-110">Projects</a>
           </span>
-          <span class="nav-item flex" data-target="#contact">
-            <img src="./img/fungus.png" class="hidden mushroom" />
+          <span
+            class="nav-item flex items-center justify-center gap-4"
+            data-target="#contact"
+          >
+            <img src="./img/fungus.png" class="hidden h-3 w-3 mushroom" />
             <a href="#contact" class="hover:scale-110">Contact</a>
           </span>
         </nav>
@@ -189,30 +219,29 @@
               ¡It's me, Jeff!
             </h2>
             <p class="text-sm text-white font-['Silkscreen'] leading-relaxed">
-              Soy un desarrollador creativo de Trujillo<br />
-              Apasionado por el diseño retro, la programación y los
-              videojuegos.<br />
-              Me encanta convertir ideas en experiencias interactivas que hagan
-              sonreír a los usuarios.<br />
-              Actualmente estudio Ingeniería de Software y disfruto aprender
-              cada día algo nuevo.
+              I am a creative developer<br />
+              Passionate about retro design, programming, and video games.<br />
+              I love turning ideas into interactive experiences that make users
+              smile.<br />
+              I'm currently studying Software Engineering and enjoy learning
+              something new every day.
             </p>
             <div
               class="mt-4 text-xs md:text-sm text-left font-['Silkscreen'] text-yellow-300"
             >
-              <p><strong>Nivel:</strong> Junior Dev</p>
+              <p><strong>Level:</strong> Junior Dev</p>
               <p><strong>Power-Ups:</strong> HTML, Tailwind, JavaScript, Git</p>
               <p>
-                <strong>Misión:</strong> ¡Conquistar el mundo web con
-                creatividad!
+                <strong>Mission:</strong>Conquer the web world with creativity!
               </p>
             </div>
-            <button
-              type="submit"
-              class="bg-yellow-400 hover:bg-yellow-300 mt-5 text-black cursor-pointer font-bold py-2 w-[50%] rounded-lg shadow-md transform hover:scale-105 transition"
+            <a
+              href="./Docs/cv jeff ingles.pdf"
+              download
+              class="bg-yellow-400 hover:bg-yellow-300 mt-5 text-black cursor-pointer font-bold py-2 w-[50%] rounded-lg shadow-md transform hover:scale-105 transition flex justify-center items-center"
             >
-              DESCARGAR CV
-            </button>
+              DOWNLOAD CV
+            </a>
           </div>
         </div>
 
@@ -233,24 +262,39 @@
         <nav
           class="navbar w-full flex z-60 gap-9 justify-center text-lg pt-5 absolute -top-1"
         >
-          <span class="nav-item flex gap-4" data-target="#home">
-            <img src="./img/fungus.png" class="hidden mushroom" />
+          <span
+            class="nav-item flex items-center justify-center gap-4"
+            data-target="#home"
+          >
+            <img src="./img/fungus.png" class="hidden h-3 w-3 mushroom" />
             <a href="#home" class="hover:scale-110">Home</a>
           </span>
-          <span class="nav-item flex" data-target="#about">
-            <img src="./img/fungus.png" class="hidden mushroom" />
+          <span
+            class="nav-item flex items-center justify-center gap-4"
+            data-target="#about"
+          >
+            <img src="./img/fungus.png" class="hidden h-3 w-3 mushroom" />
             <a href="#about" class="hover:scale-110">About</a>
           </span>
-          <span class="nav-item flex" data-target="#skills">
-            <img src="./img/fungus.png" class="hidden mushroom" />
+          <span
+            class="nav-item flex items-center justify-center gap-4"
+            data-target="#skills"
+          >
+            <img src="./img/fungus.png" class="hidden h-3 w-3 mushroom" />
             <a href="#skills" class="hover:scale-110">Skills</a>
           </span>
-          <span class="nav-item flex" data-target="#projects">
-            <img src="./img/fungus.png" class="hidden mushroom" />
+          <span
+            class="nav-item flex items-center justify-center gap-4"
+            data-target="#projects"
+          >
+            <img src="./img/fungus.png" class="hidden h-3 w-3 mushroom" />
             <a href="#projects" class="hover:scale-110">Projects</a>
           </span>
-          <span class="nav-item flex" data-target="#contact">
-            <img src="./img/fungus.png" class="hidden mushroom" />
+          <span
+            class="nav-item flex items-center justify-center gap-4"
+            data-target="#contact"
+          >
+            <img src="./img/fungus.png" class="hidden h-3 w-3 mushroom" />
             <a href="#contact" class="hover:scale-110">Contact</a>
           </span>
         </nav>
@@ -261,151 +305,94 @@
           <img src="./img/card-pixel.png" alt="" />
         </div>
 
-        <div id="habilidades" class="panel py-10 px-4 md:px-20 z-70">
-          <!-- FRONTEND -->
-          <div class="mb-6">
-            <button
-              class="boton-toggle w-full text-left bg-red-500 text-white px-4 py-3 rounded font-['Silkscreen']"
-              data-target="frontend"
-            >
-              🔥 FRONTEND
-            </button>
-            <div
-              id="frontend"
-              class="contenido max-h-0 overflow-hidden opacity-0 transition-all duration-500 ease-in-out grid md:grid-cols-3 gap-4 mt-4"
-            >
-              <div
-                class="bg-white dark:bg-gray-800 p-4 rounded-lg shadow text-center"
-              >
-                <img
-                  src="./img/html.png"
-                  alt="HTML"
-                  class="w-12 h-12 mx-auto mb-2"
-                />
-                <p class="text-black dark:text-white font-bold">HTML</p>
-                <p class="text-yellow-400">⭐⭐⭐⭐⭐</p>
-              </div>
-              <div
-                class="bg-white dark:bg-gray-800 p-4 rounded-lg shadow text-center"
-              >
-                <img
-                  src="./img/css.png"
-                  alt="CSS"
-                  class="w-12 h-12 mx-auto mb-2"
-                />
-                <p class="text-black dark:text-white font-bold">CSS</p>
-                <p class="text-yellow-400">⭐⭐⭐⭐⭐</p>
-              </div>
-              <div
-                class="bg-white dark:bg-gray-800 p-4 rounded-lg shadow text-center"
-              >
-                <img
-                  src="./img/javascript.png"
-                  alt="JS"
-                  class="w-12 h-12 mx-auto mb-2"
-                />
-                <p class="text-black dark:text-white font-bold">JavaScript</p>
-                <p class="text-yellow-400">⭐⭐⭐⭐⭐</p>
-              </div>
-              <!-- Agrega más frontend si deseas -->
-            </div>
-          </div>
+<div id="habilidades" class="panel py-10 px-4 md:px-20 z-70 font-['Silkscreen']">
 
-          <!-- BACKEND -->
-          <div class="mb-6">
-            <button
-              class="boton-toggle w-full text-left bg-blue-500 text-white px-4 py-3 rounded font-['Silkscreen']"
-              data-target="backend"
-            >
-              ⚙️ BACKEND
-            </button>
-            <div
-              id="backend"
-              class="contenido max-h-0 overflow-hidden opacity-0 transition-all duration-500 ease-in-out grid md:grid-cols-3 gap-4 mt-4"
-            >
-              <div
-                class="bg-white dark:bg-gray-800 p-4 rounded-lg shadow text-center"
-              >
-                <img
-                  src="./img/java.png"
-                  alt="Java"
-                  class="w-12 h-12 mx-auto mb-2"
-                />
-                <p class="text-black dark:text-white font-bold">Java</p>
-                <p class="text-yellow-400">⭐⭐⭐⭐</p>
-              </div>
-              <div
-                class="bg-white dark:bg-gray-800 p-4 rounded-lg shadow text-center"
-              >
-                <img
-                  src="./img/mysql.png"
-                  alt="MySQL"
-                  class="w-12 h-12 mx-auto mb-2"
-                />
-                <p class="text-black dark:text-white font-bold">MySQL</p>
-                <p class="text-yellow-400">⭐⭐⭐⭐</p>
-              </div>
-            </div>
-          </div>
+  <!-- FRONTEND -->
+  <div class="mb-6">
+    <button class="boton-toggle w-full text-left bg-red-500 text-white px-3 cursor-pointer py-2 rounded shadow-md hover:bg-red-400 hover:scale-105 transition-all duration-300 border-b-4 border-red-800" data-target="frontend">
+      FRONTEND
+    </button>
+    <div id="frontend" class="contenido max-h-0 overflow-hidden opacity-0 transition-all duration-500 ease-in-out grid grid-cols-2 md:grid-cols-3  gap-4 mt-4">
+      <div class="bg-neutral-100 dark:bg-gray-800 border border-yellow-400 p-4 rounded-lg shadow-md hover:scale-105 transition duration-300 text-center">
+        <img src="https://img.icons8.com/color/48/html-5--v1.png" alt="HTML" class="w-10 h-10 mx-auto mb-2" />
+        <p class="text-black dark:text-white text-xs font-bold">HTML</p>
 
-          <!-- HERRAMIENTAS -->
-          <div>
-            <button
-              class="boton-toggle w-full text-left bg-green-500 text-white px-4 py-3 rounded font-['Silkscreen']"
-              data-target="herramientas"
-            >
-              🛠️ HERRAMIENTAS
-            </button>
-            <div
-              id="herramientas"
-              class="contenido max-h-0 overflow-hidden opacity-0 transition-all duration-500 ease-in-out grid md:grid-cols-3 gap-4 mt-4"
-            >
-              <div
-                class="bg-white dark:bg-gray-800 p-4 rounded-lg shadow text-center"
-              >
-                <img
-                  src="./img/git.png"
-                  alt="Git"
-                  class="w-12 h-12 mx-auto mb-2"
-                />
-                <p class="text-black dark:text-white font-bold">Git</p>
-                <p class="text-yellow-400">⭐⭐⭐⭐⭐</p>
-              </div>
-              <div
-                class="bg-white dark:bg-gray-800 p-4 rounded-lg shadow text-center"
-              >
-                <img
-                  src="./img/vercel.png"
-                  alt="Vercel"
-                  class="w-12 h-12 mx-auto mb-2"
-                />
-                <p class="text-black dark:text-white font-bold">Vercel</p>
-                <p class="text-yellow-400">⭐⭐⭐</p>
-              </div>
-              <div
-                class="bg-white dark:bg-gray-800 p-4 rounded-lg shadow text-center"
-              >
-                <img
-                  src="./img/figma.png"
-                  alt="Figma"
-                  class="w-12 h-12 mx-auto mb-2"
-                />
-                <p class="text-black dark:text-white font-bold">Figma</p>
-                <p class="text-yellow-400">⭐⭐⭐</p>
-              </div>
-              <div
-                class="bg-white dark:bg-gray-800 p-4 rounded-lg shadow text-center"
-              >
-                <img
-                  src="./img/scrum.png"
-                  alt="Scrum"
-                  class="w-12 h-12 mx-auto mb-2"
-                />
-                <p class="text-black dark:text-white font-bold">Scrum</p>
-                <p class="text-yellow-400">⭐⭐⭐⭐</p>
-              </div>
-            </div>
-          </div>
+      </div>
+      <div class="bg-neutral-100 dark:bg-gray-800 border border-yellow-400 p-4 rounded-lg shadow-md hover:scale-105 transition duration-300 text-center">
+        <img src="https://img.icons8.com/color/48/css3.png" alt="CSS" class="w-10 h-10 mx-auto mb-2" />
+        <p class="text-black dark:text-white text-xs font-bold">CSS</p>
+
+      </div>
+      <div class="bg-neutral-100 dark:bg-gray-800 border border-yellow-400 p-4 rounded-lg shadow-md hover:scale-105 transition duration-300 text-center">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript" class="w-10 h-10 mx-auto mb-2" />
+        <p class="text-black dark:text-white text-xs font-bold">JavaScript</p>  
+      </div>
+      <div class="bg-neutral-100 dark:bg-gray-800 border border-yellow-400 p-4 rounded-lg shadow-md hover:scale-105 transition duration-300 text-center">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React" class="w-10 h-10 mx-auto mb-2" />
+        <p class="text-black dark:text-white text-xs font-bold">React</p>  
+      </div>
+      <div class="bg-neutral-100 dark:bg-gray-800 border border-yellow-400 p-4 rounded-lg shadow-md hover:scale-105 transition duration-300 text-center">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" alt="TypeScript" class="w-10 h-10 mx-auto mb-2" />
+        <p class="text-black dark:text-white text-xs font-bold">TypeScript</p>  
+      </div>      
+    </div>
+  </div>
+
+  <!-- BACKEND -->
+  <div class="mb-6">
+    <button class="boton-toggle w-full text-left bg-blue-500 text-white px-3 cursor-pointer py-2 rounded shadow-md hover:bg-blue-400 hover:scale-105 transition-all duration-300 border-b-4 border-blue-800" data-target="backend">
+      BACKEND
+    </button>
+    <div id="backend" class="contenido max-h-0 overflow-hidden opacity-0 transition-all duration-500 ease-in-out grid grid-cols-2 md:grid-cols-3 gap-4 mt-4">
+      <div class="bg-neutral-100 dark:bg-gray-800 border border-blue-400 p-4 rounded-lg shadow-md hover:scale-105 transition duration-300 text-center">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" alt="Java" class="w-10 h-10 mx-auto mb-2" />
+        <p class="text-black dark:text-white text-xs font-bold">Java</p>
+
+      </div>
+      <div class="bg-neutral-100 dark:bg-gray-800 border border-blue-400 p-4 rounded-lg shadow-md hover:scale-105 transition duration-300 text-center">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="MySQL" class="w-10 h-10 mx-auto mb-2" />
+        <p class="text-black dark:text-white text-xs font-bold">MySQL</p>
+      </div>
+      <div class="bg-neutral-100 dark:bg-gray-800 border border-blue-400 p-4 rounded-lg shadow-md hover:scale-105 transition duration-300 text-center">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/4/44/Spring_Framework_Logo_2018.svg" alt="Spring Framework" alt="MySQL" class="w-10 h-10 mx-auto mb-2" />
+        <p class="text-black dark:text-white text-xs font-bold">Spring</p>
+      </div>
+      <div class="bg-neutral-100 dark:bg-gray-800 border border-blue-400 p-4 rounded-lg shadow-md hover:scale-105 transition duration-300 text-center">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/9/93/Amazon_Web_Services_Logo.svg" alt="AWS" alt="MySQL" class="w-10 h-10 mx-auto mb-2" />
+        <p class="text-black dark:text-white text-xs font-bold">Aws</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- TOOLS -->
+  <div>
+    <button class="boton-toggle w-full text-left bg-green-500 text-white px-3 cursor-pointer py-2 rounded shadow-md hover:bg-green-400 hover:scale-105 transition-all duration-300 border-b-4 border-green-800" data-target="herramientas">
+      TOOLS
+    </button>
+    <div id="herramientas" class="contenido max-h-0 overflow-hidden opacity-0 transition-all duration-500 ease-in-out grid grid-cols-2 md:grid-cols-3 gap-4 mt-4">
+      <div class="bg-neutral-100 dark:bg-gray-800 border border-green-400 p-4 rounded-lg shadow-md hover:scale-105 transition duration-300 text-center">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git" class="w-10 h-10 mx-auto mb-2" />
+        <p class="text-black dark:text-white text-xs font-bold">Git</p>
+
+      </div>
+      <div class="bg-neutral-100 dark:bg-gray-800 border border-green-400 p-4 rounded-lg shadow-md hover:scale-105 transition duration-300 text-center">
+        <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/vercel/vercel-original.svg" alt="Vercel" class="w-10 h-10 mx-auto mb-2" />
+        <p class="text-black dark:text-white text-xs font-bold">Vercel</p>
+   
+      </div>
+      <div class="bg-neutral-100 dark:bg-gray-800 border border-green-400 p-4 rounded-lg shadow-md hover:scale-105 transition duration-300 text-center">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" alt="Figma" class="w-10 h-10 mx-auto mb-2" />
+        <p class="text-black dark:text-white text-xs font-bold">Figma</p>
+   
+      </div>
+      <div class="bg-neutral-100 dark:bg-gray-800 border border-green-400 p-4 rounded-lg shadow-md hover:scale-105 transition duration-300 text-center">
+        <img src="https://img.icons8.com/external-flaticons-flat-flat-icons/64/external-scrum-agile-flaticons-flat-flat-icons.png" alt="Scrum" class="w-10 h-10 mx-auto mb-2" />
+        <p class="text-black dark:text-white text-xs font-bold">Scrum</p>    
+      </div>
+    </div>
+  </div>
+</div>
+
         </div>
       </section>
 
@@ -417,24 +404,39 @@
         <nav
           class="navbar w-full flex z-60 gap-9 justify-center text-lg pt-5 absolute -top-1"
         >
-          <span class="nav-item flex gap-4" data-target="#home">
-            <img src="./img/fungus.png" class="hidden mushroom" />
+          <span
+            class="nav-item flex items-center justify-center gap-4"
+            data-target="#home"
+          >
+            <img src="./img/fungus.png" class="hidden h-3 w-3 mushroom" />
             <a href="#home" class="hover:scale-110">Home</a>
           </span>
-          <span class="nav-item flex" data-target="#about">
-            <img src="./img/fungus.png" class="hidden mushroom" />
+          <span
+            class="nav-item flex items-center justify-center gap-4"
+            data-target="#about"
+          >
+            <img src="./img/fungus.png" class="hidden h-3 w-3 mushroom" />
             <a href="#about" class="hover:scale-110">About</a>
           </span>
-          <span class="nav-item flex" data-target="#skills">
-            <img src="./img/fungus.png" class="hidden mushroom" />
+          <span
+            class="nav-item flex items-center justify-center gap-4"
+            data-target="#skills"
+          >
+            <img src="./img/fungus.png" class="hidden h-3 w-3 mushroom" />
             <a href="#skills" class="hover:scale-110">Skills</a>
           </span>
-          <span class="nav-item flex" data-target="#projects">
-            <img src="./img/fungus.png" class="hidden mushroom" />
+          <span
+            class="nav-item flex items-center justify-center gap-4"
+            data-target="#projects"
+          >
+            <img src="./img/fungus.png" class="hidden h-3 w-3 mushroom" />
             <a href="#projects" class="hover:scale-110">Projects</a>
           </span>
-          <span class="nav-item flex" data-target="#contact">
-            <img src="./img/fungus.png" class="hidden mushroom" />
+          <span
+            class="nav-item flex items-center justify-center gap-4"
+            data-target="#contact"
+          >
+            <img src="./img/fungus.png" class="hidden h-3 w-3 mushroom" />
             <a href="#contact" class="hover:scale-110">Contact</a>
           </span>
         </nav>
@@ -575,24 +577,39 @@
         <nav
           class="navbar w-full flex z-60 gap-9 justify-center text-lg pt-5 absolute -top-1"
         >
-          <span class="nav-item flex gap-4" data-target="#home">
-            <img src="./img/fungus.png" class="hidden mushroom" />
+          <span
+            class="nav-item flex items-center justify-center gap-4"
+            data-target="#home"
+          >
+            <img src="./img/fungus.png" class="hidden h-3 w-3 mushroom" />
             <a href="#home" class="hover:scale-110">Home</a>
           </span>
-          <span class="nav-item flex" data-target="#about">
-            <img src="./img/fungus.png" class="hidden mushroom" />
+          <span
+            class="nav-item flex items-center justify-center gap-4"
+            data-target="#about"
+          >
+            <img src="./img/fungus.png" class="hidden h-3 w-3 mushroom" />
             <a href="#about" class="hover:scale-110">About</a>
           </span>
-          <span class="nav-item flex" data-target="#skills">
-            <img src="./img/fungus.png" class="hidden mushroom" />
+          <span
+            class="nav-item flex items-center justify-center gap-4"
+            data-target="#skills"
+          >
+            <img src="./img/fungus.png" class="hidden h-3 w-3 mushroom" />
             <a href="#skills" class="hover:scale-110">Skills</a>
           </span>
-          <span class="nav-item flex" data-target="#projects">
-            <img src="./img/fungus.png" class="hidden mushroom" />
+          <span
+            class="nav-item flex items-center justify-center gap-4"
+            data-target="#projects"
+          >
+            <img src="./img/fungus.png" class="hidden h-3 w-3 mushroom" />
             <a href="#projects" class="hover:scale-110">Projects</a>
           </span>
-          <span class="nav-item flex" data-target="#contact">
-            <img src="./img/fungus.png" class="hidden mushroom" />
+          <span
+            class="nav-item flex items-center justify-center gap-4"
+            data-target="#contact"
+          >
+            <img src="./img/fungus.png" class="hidden h-3 w-3 mushroom" />
             <a href="#contact" class="hover:scale-110">Contact</a>
           </span>
         </nav>
@@ -609,65 +626,37 @@
           <h2
             class="text-3xl md:text-4xl font-['Press_Start_2P'] text-white text-center"
           >
-            ¡CONTÁCTAME!
+            CONTACT ME
           </h2>
 
           <form class="space-y-5">
             <div class="flex items-center space-x-3">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                class="w-6 h-6 text-white"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path
-                  d="M12 12c2.7 0 4.5-2.3 4.5-5S14.7 2 12 2 7.5 4.3 7.5 7 9.3 12 12 12Zm0 2c-3 0-9 1.5-9 4.5V21h18v-2.5c0-3-6-4.5-9-4.5Z"
-                />
-              </svg>
+              <img src="./img/copa.png" alt="" class="w-10">
               <input
                 type="text"
                 name="nombre"
-                placeholder="Tu nombre"
-                class="flex-1 bg-gray-700 text-white border border-white rounded px-4 py-2 focus:outline-none focus:ring-2 focus:ring-white"
+                placeholder="Your name"
+                class="flex-1 bg-[#78450e] text-white text-xs border border-white rounded px-4 py-2 focus:outline-none focus:ring-2 focus:ring-white"
               />
             </div>
 
             <div class="flex items-center space-x-3">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                class="w-6 h-6 text-white"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path
-                  d="M4 4h16c1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1 0-2-.9-2-2V6c0-1.1.9-2 2-2Zm8 7L4 6h16l-8 5Zm0 2l8 5H4l8-5Z"
-                />
-              </svg>
+              <img src="./img/email.png" alt="" class="w-10">
               <input
                 type="email"
                 name="correo"
-                placeholder="Tu correo"
-                class="flex-1 bg-gray-700 text-white border border-white rounded px-4 py-2 focus:outline-none focus:ring-2 focus:ring-white"
+                placeholder="Your Email"
+                class="flex-1 bg-[#78450e] text-white text-xs border border-white rounded px-4 py-2 focus:outline-none focus:ring-2 focus:ring-white"
               />
             </div>
 
             <div class="flex items-start space-x-3">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                class="w-6 h-6 mt-2 text-white"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path d="M4 4h16v14H6l-2 2V4Zm2 4h12M6 12h8" />
-              </svg>
+              <img src="./img/mensaje.png" alt="" class="w-10">
               <textarea
                 name="mensaje"
                 rows="4"
-                placeholder="Tu mensaje"
-                class="flex-1 bg-gray-700 text-white border border-white rounded px-4 py-2 focus:outline-none focus:ring-2 focus:ring-white resize-none"
+                placeholder="Your message"
+                class="flex-1 bg-[#78450e] text-white text-xs border border-white rounded px-4 py-2 focus:outline-none focus:ring-2 focus:ring-white resize-none"
               ></textarea>
             </div>
 
@@ -676,14 +665,14 @@
                 type="submit"
                 class="bg-yellow-400 hover:bg-yellow-300 text-black cursor-pointer font-bold py-2 px-6 rounded-lg shadow-md transform hover:scale-105 transition"
               >
-                ENVIAR
+                SEND
               </button>
             </div>
           </form>
 
           <div class="flex justify-center mt-6 space-x-6">
             <a
-              href="https://github.com/"
+              href="https://github.com/JeffStevenGT"
               target="_blank"
               class="hover:scale-110 transition"
             >
@@ -700,7 +689,7 @@
             </a>
 
             <a
-              href="https://linkedin.com/"
+              href="https://www.linkedin.com/in/jeff-steven-gil-toribio-653624160/"
               target="_blank"
               class="hover:scale-110 transition"
             >
