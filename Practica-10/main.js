@@ -11,7 +11,7 @@ async function fetchUsers() {
     users.forEach((user) => {
       const card = document.createElement("div");
       card.className =
-        "bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow flex flex-col items-center text-center";
+        "bg-white rounded-lg shadow-lg p-6 hover:shadow-2xl transition-shadow flex flex-col items-center text-center hover:scale-110";
 
       card.innerHTML = `
         <div class="mb-4 ">
