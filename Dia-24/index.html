@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="./main.js" defer></script>
+    <link rel="stylesheet" href="./output.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <header class="flex items-center justify-between px-3 bg-red-600 py-2">
+      <img src="./image/pokebola2025.gif" alt="" class="size-14 rounded-full" />
+      <img
+        src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/International_Pok%C3%A9mon_logo.svg/2560px-International_Pok%C3%A9mon_logo.svg.png"
+        alt=""
+        class="h-14"
+      />
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke-width="1.5"
+        stroke="currentColor"
+        class="size-14 text-white"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+        />
+      </svg>
+    </header>
+    <main class="p-4">
+      <div id="filtros" class="flex items-center justify-center gap-8">
+        <div
+          class="flex border border-black/50 items-center justify-center rounded-2xl px-3"
+        >
+          <input type="text" placeholder="pokemon" class="focus:outline-none" />
+          <button>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="size-6"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z"
+              />
+            </svg>
+          </button>
+        </div>
+        <div>
+          <div
+            id="drpwn"
+            class="flex items-center justify-center gap-2 border border-black rounded-xl px-2"
+          >
+            <h2>Tipos</h2>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="size-6"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="m19.5 8.25-7.5 7.5-7.5-7.5"
+              />
+            </svg>
+          </div>
+          <div
+            id="opciones"
+            class="flex flex-col items-center justify-center border absolute mt-0.5 hidden"
+          >
+            <ul class="flex flex-col">
+              <ul>
+                <li
+                  class="bg-gray-400 text-black flex gap-1 items-center justify-center p-2 cursor-pointer normal"
+                  id="normal"
+                >
+                  normal
+                  <!-- 🔥 ICONO FIRE COMO PLACEHOLDER -->
+                </li>
+                <li
+                  class="bg-red-800 text-white flex gap-1 items-center justify-center p-2 cursor-pointer fighting"
+                  id="fighting"
+                >
+                  lucha
+                </li>
+                <li
+                  class="bg-sky-300 text-gray-900 flex gap-1 items-center justify-center p-2 cursor-pointer flying"
+                  id="flying"
+                >
+                  volador
+                </li>
+                <li
+                  class="bg-purple-700 text-white flex gap-1 items-center justify-center p-2 cursor-pointer poison"
+                  id="poison"
+                >
+                  veneno
+                </li>
+                <li
+                  class="bg-yellow-800 text-white flex gap-1 items-center justify-center p-2 cursor-pointer ground"
+                  id="ground"
+                >
+                  tierra
+                </li>
+                <li
+                  class="bg-stone-500 text-white flex gap-1 items-center justify-center p-2 cursor-pointer rock"
+                  id="rock"
+                >
+                  roca
+                </li>
+                <li
+                  class="bg-lime-500 text-black flex gap-1 items-center justify-center p-2 cursor-pointer bug"
+                  id="bug"
+                >
+                  bicho
+                </li>
+                <li
+                  class="bg-indigo-900 text-white flex gap-1 items-center justify-center p-2 cursor-pointer ghost"
+                  id="ghost"
+                >
+                  fantasma
+                </li>
+                <li
+                  class="bg-gray-500 text-white flex gap-1 items-center justify-center p-2 cursor-pointer steel"
+                  id="steel"
+                >
+                  acero
+                </li>
+                <li
+                  class="bg-red-600 text-yellow-300 flex gap-1 items-center justify-center p-2 cursor-pointer fire"
+                  id="fire"
+                >
+                  fuego
+                </li>
+                <li
+                  class="bg-blue-500 text-white flex gap-1 items-center justify-center p-2 cursor-pointer water"
+                  id="water"
+                >
+                  agua
+                </li>
+                <li
+                  class="bg-green-600 text-white flex gap-1 items-center justify-center p-2 cursor-pointer grass"
+                  id="grass"
+                >
+                  planta
+                </li>
+                <li
+                  class="bg-yellow-300 text-black flex gap-1 items-center justify-center p-2 cursor-pointer electric"
+                  id="electric"
+                >
+                  eléctrico
+                </li>
+                <li
+                  class="bg-pink-400 text-black flex gap-1 items-center justify-center p-2 cursor-pointer psychic"
+                  id="psychic"
+                >
+                  psíquico
+                </li>
+                <li
+                  class="bg-cyan-300 text-black flex gap-1 items-center justify-center p-2 cursor-pointer ice"
+                  id="ice"
+                >
+                  hielo
+                </li>
+                <li
+                  class="bg-violet-700 text-white flex gap-1 items-center justify-center p-2 cursor-pointer dragon"
+                  id="dragon"
+                >
+                  dragón
+                </li>
+                <li
+                  class="bg-zinc-900 text-white flex gap-1 items-center justify-center p-2 cursor-pointer dark"
+                  id="dark"
+                >
+                  siniestro
+                </li>
+                <li
+                  class="bg-pink-200 text-black flex gap-1 items-center justify-center p-2 cursor-pointer fairy"
+                  id="fairy"
+                >
+                  hada [
+                </li>
+              </ul>
+
+              <!--  <li
+                class="bg-red-600 text-yellow-300 flex gap-1 items-center justify-center p-2 cursor-pointer fire"
+                id="fire"
+              >
+                fuego
+                <svg
+                  viewBox="-33 0 255 255"
+                  xmlns="http://www.w3.org/2000/svg"
+                  xmlns:xlink="http://www.w3.org/1999/xlink"
+                  preserveAspectRatio="xMidYMid"
+                  fill="#000000"
+                  class="size-4 fire"
+                >
+                  <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                  <g
+                    id="SVGRepo_tracerCarrier"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  ></g>
+                  <g id="SVGRepo_iconCarrier">
+                    <defs>
+                      <style>
+                        .cls-3 {
+                          fill: url(#linear-gradient-1);
+                        }
+                        .cls-4 {
+                          fill: #fc9502;
+                        }
+                        .cls-5 {
+                          fill: #fce202;
+                        }
+                      </style>
+                      <linearGradient
+                        id="linear-gradient-1"
+                        gradientUnits="userSpaceOnUse"
+                        x1="94.141"
+                        y1="255"
+                        x2="94.141"
+                        y2="0.188"
+                      >
+                        <stop offset="0" stop-color="#ff4c0d"></stop>
+                        <stop offset="1" stop-color="#fc9502"></stop>
+                      </linearGradient>
+                    </defs>
+                    <g id="fire">
+                      <path
+                        d="M187.899,164.809 C185.803,214.868 144.574,254.812 94.000,254.812 C42.085,254.812 -0.000,211.312 -0.000,160.812 C-0.000,154.062 -0.121,140.572 10.000,117.812 C16.057,104.191 19.856,95.634 22.000,87.812 C23.178,83.513 25.469,76.683 32.000,87.812 C35.851,94.374 36.000,103.812 36.000,103.812 C36.000,103.812 50.328,92.817 60.000,71.812 C74.179,41.019 62.866,22.612 59.000,9.812 C57.662,5.384 56.822,-2.574 66.000,0.812 C75.352,4.263 100.076,21.570 113.000,39.812 C131.445,65.847 138.000,90.812 138.000,90.812 C138.000,90.812 143.906,83.482 146.000,75.812 C148.365,67.151 148.400,58.573 155.999,67.813 C163.226,76.600 173.959,93.113 180.000,108.812 C190.969,137.321 187.899,164.809 187.899,164.809 Z"
+                        id="path-1"
+                        class="cls-3"
+                        fill-rule="evenodd"
+                      ></path>
+                      <path
+                        d="M94.000,254.812 C58.101,254.812 29.000,225.711 29.000,189.812 C29.000,168.151 37.729,155.000 55.896,137.166 C67.528,125.747 78.415,111.722 83.042,102.172 C83.953,100.292 86.026,90.495 94.019,101.966 C98.212,107.982 104.785,118.681 109.000,127.812 C116.266,143.555 118.000,158.812 118.000,158.812 C118.000,158.812 125.121,154.616 130.000,143.812 C131.573,140.330 134.753,127.148 143.643,140.328 C150.166,150.000 159.127,167.390 159.000,189.812 C159.000,225.711 129.898,254.812 94.000,254.812 Z"
+                        id="path-2"
+                        class="cls-4"
+                        fill-rule="evenodd"
+                      ></path>
+                      <path
+                        d="M95.000,183.812 C104.250,183.812 104.250,200.941 116.000,223.812 C123.824,239.041 112.121,254.812 95.000,254.812 C77.879,254.812 69.000,240.933 69.000,223.812 C69.000,206.692 85.750,183.812 95.000,183.812 Z"
+                        id="path-3"
+                        class="cls-5"
+                        fill-rule="evenodd"
+                      ></path>
+                    </g>
+                  </g>
+                </svg>
+              </li>
+              <li
+                class="bg-blue-700 text-white flex gap-1 items-center justify-center p-2 cursor-pointer"
+                id="water"
+              >
+                agua
+                <svg
+                  fill="#fcfcfc"
+                  viewBox="0 0 22 22"
+                  xmlns="http://www.w3.org/2000/svg"
+                  id="memory-water"
+                  stroke="#fcfcfc"
+                  class="size-4"
+                >
+                  <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                  <g
+                    id="SVGRepo_tracerCarrier"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  ></g>
+                  <g id="SVGRepo_iconCarrier">
+                    <path
+                      d="M14,21H8V20H6V19H5V18H4V16H3V13H4V11H5V9H6V7H7V6H8V4H9V3H10V1H12V3H13V4H14V6H15V7H16V9H17V11H18V13H19V16H18V18H17V19H16V20H14Z"
+                    ></path>
+                  </g>
+                </svg>
+              </li>
+              <li
+                class="bg-black text-white flex gap-1 items-center justify-center p-2 cursor-pointer"
+                id="ghost"
+              >
+                fantasma
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="size-4"
+                >
+                  <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                  <g
+                    id="SVGRepo_tracerCarrier"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  ></g>
+                  <g id="SVGRepo_iconCarrier">
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M22 19.2058V12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12V19.2058C2 20.4896 3.35098 21.3245 4.4992 20.7504C5.42726 20.2864 6.5328 20.3552 7.39614 20.9308C8.36736 21.5782 9.63264 21.5782 10.6039 20.9308L10.9565 20.6957C11.5884 20.2744 12.4116 20.2744 13.0435 20.6957L13.3961 20.9308C14.3674 21.5782 15.6326 21.5782 16.6039 20.9308C17.4672 20.3552 18.5727 20.2864 19.5008 20.7504C20.649 21.3245 22 20.4896 22 19.2058ZM16 10.5C16 11.3284 15.5523 12 15 12C14.4477 12 14 11.3284 14 10.5C14 9.67157 14.4477 9 15 9C15.5523 9 16 9.67157 16 10.5ZM9 12C9.55228 12 10 11.3284 10 10.5C10 9.67157 9.55228 9 9 9C8.44772 9 8 9.67157 8 10.5C8 11.3284 8.44772 12 9 12Z"
+                      fill="#ffffff"
+                    ></path>
+                  </g>
+                </svg>
+              </li> -->
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div
+        id="pokemons-container"
+        class="grid grid-cols-1 md:grid-cols-5 gap-4 p-4"
+      ></div>
+      <div id="contendor-btns" class="flex items-center justify-between">
+        <button class="bg-red-600 text-white p-4 rounded-2xl" id="anterior">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            class="size-6"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M6.75 15.75 3 12m0 0 3.75-3.75M3 12h18"
+            />
+          </svg>
+        </button>
+        <button class="bg-red-600 text-white p-4 rounded-2xl" id="siguiente">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            class="size-6"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3"
+            />
+          </svg>
+        </button>
+      </div>
+
+      <!-- Modal -->
+      <div
+        id="modal"
+        class="fixed inset-0 flex justify-center items-center hidden absolute"
+      >
+        <div class="w-screen h-screen bg-black opacity-90 absolute"></div>
+        <div
+          id="modal-content"
+          class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg w-[90%] max-w-md overflow-auto max-h-[90vh] relative z-90"
+        ></div>
+      </div>
+    </main>
+  </body>
+</html>
