@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="es" class="">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rick and Morty API</title>
+    <link rel="stylesheet" href="./output.css" />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body
+    class="bg-white text-black dark:bg-gray-900 dark:text-white min-h-screen flex flex-col"
+  >
+    <label class="theme-switch flex fixed right-4 top-4 z-50">
+      <input type="checkbox" id="themeToggle" class="theme-switch__checkbox" />
+      <div class="theme-switch__container">
+        <div class="theme-switch__clouds"></div>
+        <div class="theme-switch__circle-container">
+          <div class="theme-switch__sun-moon-container">
+            <div class="theme-switch__moon">
+              <div class="theme-switch__spot"></div>
+              <div class="theme-switch__spot"></div>
+              <div class="theme-switch__spot"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </label>
+
+    <!-- Hero -->
+    <section
+      class="relative w-full h-72 md:h-96 lg:h-[32rem] flex justify-center items-baseline overflow-hidden"
+    >
+      <video id="videoFondo" class="absolute w-screen h-full object-cover z-0">
+        <source src="./video/rick-and-morty4.mp4" type="video/mp4" />
+      </video>
+      <div
+        class="bg-black/60 py-2 px-4 rounded-xl z-10 text-center max-w-xl hover:shadow-xl mt-3"
+      >
+        <h2 class="text-4xl font-bold text-white mb-1">
+          ¡Explorá el Multiverso!
+        </h2>
+        <p class="text-lg text-white">
+          Acompañá a Rick y Morty en sus aventuras interdimensionales
+        </p>
+      </div>
+    </section>
+
+    <!-- Buscador y Filtros -->
+    <section class="mt-10 mb-6 px-4">
+      <div class="flex flex-wrap justify-center gap-4">
+        <input type="text" id="searchInput" placeholder="Buscar por nombre"
+        class="px-4 py-2 bg-white text-black dark:bg-gray-800 dark:text-white
+        rounded-md w-full max-w-md border-1 border-gray-200 dark:border-gray-800
+        focus:outline-none focus:ring-1 focus:ring-white" " />
+        <button
+          id="searchButton"
+          class="bg-green-600 font-semibold dark:bg-green-700 px-4 py-2 rounded-md hover:bg-green-700 transition cursor-pointer hover:scale-90"
+        >
+          Buscar
+        </button>
+      </div>
+
+      <div class="flex flex-wrap justify-center gap-4 mt-4">
+        <select
+          id="statusFilter"
+          class="bg-white text-black dark:bg-gray-800 dark:text-white p-2 rounded-md"
+        >
+          <option value="">Estado</option>
+          <option value="alive">Vivo 🫀</option>
+          <option value="dead">Muerto 💀</option>
+          <option value="unknown">Desconocido ❓</option>
+        </select>
+        <select
+          id="speciesFilter"
+          class="bg-white text-black dark:bg-gray-800 dark:text-white p-2 rounded-md"
+        >
+          <option value="">Especie</option>
+          <option value="human">Humano 🧍</option>
+          <option value="alien">Alienígena 👽</option>
+          <option value="robot">Robot 🤖</option>
+        </select>
+        <select
+          id="genderFilter"
+          class="bg-white text-black dark:bg-gray-800 dark:text-white p-2 rounded-md"
+        >
+          <option value="">Género</option>
+          <option value="male">Masculino 🚹</option>
+          <option value="female">Femenino 🚺</option>
+          <option value="genderless">Sin genero ⚧️</option>
+          <option value="unknown">Desconocido ❔</option>
+        </select>
+      </div>
+    </section>
+
+    <!-- SECCION PERSONAJES -->
+    <div class="max-w-7xl mx-auto px-4">
+      <!-- Cards Personajes-->
+      <section
+        id="characters-container"
+        class="grid gap-8 grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 mb-10"
+      ></section>
+
+      <!-- Navegación -->
+      <div class="flex justify-center gap-4 mb-12 flex-wrap">
+        <button
+          id="prevButton"
+          class="px-4 py-2 rounded bg-green-600 hover:bg-green-700 transition disabled:opacity-50 cursor-pointer"
+          disabled
+        >
+          Anterior
+        </button>
+        <button
+          id="nextButton"
+          class="px-4 py-2 rounded bg-green-600 hover:bg-green-700 transition cursor-pointer"
+        >
+          Siguiente
+        </button>
+      </div>
+    </div>
+
+    <!-- SECCIÓN LOCACIONES -->
+
+    <section id="location-section" class="py-6 px-4">
+      <h2
+        class="grid gap-8 grid-cols-2 text-5xl pb-5 pt-4 font-bold mb-4 text-gray-900 dark:text-white text-center"
+      >
+        Locaciones
+      </h2>
+      <div
+        id="location-container"
+        class="grid gap-4 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4"
+      >
+        <!-- Cards dinámicas -->
+      </div>
+    </section>
+
+    <!-- Modal de Locación con degradado -->
+    <div
+      id="location-modal"
+      class="fixed inset-0 bg-black/70 flex items-center justify-center hidden z-50"
+    >
+      <div
+        class="bg-gradient-to-br from-gray-100 to-gray-300 dark:from-gray-800 dark:to-gray-900 text-black dark:text-white p-6 rounded-xl shadow-2xl max-w-xl w-full relative"
+      >
+        <button
+          id="close-location-modal"
+          class="absolute top-2 right-3 text-xl font-bold hover:text-red-500"
+        >
+          ×
+        </button>
+        <h3
+          id="modal-location-name"
+          class="text-xl font-bold mb-3 dark:text-green-400"
+        ></h3>
+        <p id="modal-location-type" class="mb-1"></p>
+        <p id="modal-location-dimension" class="mb-3"></p>
+
+        <div
+          id="modal-location-residents"
+          class="grid grid-cols-2 sm:grid-cols-3 gap-4 mb-4"
+        >
+          <!-- Residents con imagen -->
+        </div>
+
+        <div class="flex justify-between">
+          <button
+            id="prev-residents"
+            class="px-3 py-1 bg-green-600 hover:bg-green-700 text-white rounded disabled:opacity-50 cursor-pointer"
+          >
+            Anterior
+          </button>
+          <button
+            id="next-residents"
+            class="px-3 py-1 bg-green-600 hover:bg-green-700 text-white rounded disabled:opacity-50 cursor-pointer"
+          >
+            Siguiente
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- SECCION EPISODIOS -->
+    <section id="episode-section" class="py-6 px-4">
+      <h2
+        class="text-5xl pb-5 pt-8 font-bold mb-4 text-gray-900 dark:text-white text-center"
+      >
+        Episodios
+      </h2>
+      <div
+        id="episode-container"
+        class="grid gap-4 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4"
+      >
+        <!-- Cards dinámicas -->
+      </div>
+    </section>
+
+    <!-- Modal con fondo degradado -->
+    <div
+      id="episode-modal"
+      class="fixed inset-0 bg-black/70 flex items-center justify-center hidden z-50"
+    >
+      <div
+        class="bg-gradient-to-br from-gray-100 to-gray-300 dark:from-gray-800 dark:to-gray-900 text-black dark:text-white p-6 rounded-xl shadow-2xl max-w-xl w-full relative"
+      >
+        <button
+          id="close-episode-modal"
+          class="absolute top-2 right-3 text-xl font-bold hover:text-red-500 cursor-pointer"
+        >
+          ×
+        </button>
+        <h3
+          id="modal-episode-name"
+          class="text-xl dark:text-green-400 font-bold mb-3"
+        ></h3>
+        <p id="modal-episode-code" class="mb-1"></p>
+        <p id="modal-episode-air-date" class="mb-3"></p>
+
+        <div
+          id="modal-episode-characters"
+          class="grid grid-cols-2 sm:grid-cols-3 gap-4 mb-4"
+        ></div>
+
+        <div class="flex justify-between">
+          <button
+            id="prev-characters"
+            class="px-3 py-1 bg-green-600 hover:bg-green-700 text-white rounded disabled:opacity-50 cursor-pointer"
+          >
+            Anterior
+          </button>
+          <button
+            id="next-characters"
+            class="px-3 py-1 bg-green-600 hover:bg-green-700 text-white rounded disabled:opacity-50 cursor-pointer"
+          >
+            Siguiente
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer
+      class="bg-green-600 dark:bg-green-700 flex items-center justify-center text-center py-4 mt-auto gap-3"
+    >
+      <p>
+        &copy; 2025 Rick and Morty Fan Page - Hecho por alumnos de la fundacion
+      </p>
+      <a
+        href="https://www.fundaciondevalores.org/"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <img
+          src="https://cdn.brandfetch.io/idYqRqXUhP/w/6667/h/1667/theme/light/logo.png?c=1dxbfHSJFAPEGdCLU4o5B"
+          alt="Logo Funval"
+          class="w-20 hover:scale-75"
+        />
+      </a>
+    </footer>
+
+    <script src="./main.js"></script>
+  </body>
+</html>
+<div class="bg-gray-500"></div>
